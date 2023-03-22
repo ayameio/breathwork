@@ -9,11 +9,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import dev.ayameio.breathwork.home.Setting
-import dev.ayameio.breathwork.home.SettingData
+import dev.ayameio.breathwork.data.SettingData
 
 @Composable
-fun SettingsCard(modifier: Modifier = Modifier, settings: List<SettingData>) {
+fun SettingsCard(
+    modifier: Modifier = Modifier,
+    settings: List<SettingData>,
+    selectable: Boolean = true,
+    onClick: () -> Unit
+) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -34,11 +38,11 @@ fun SettingsCard(modifier: Modifier = Modifier, settings: List<SettingData>) {
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.SpaceEvenly
             ) {
-                settings.forEach {setting ->
+                settings.forEach { setting ->
                     Setting(
-                        title = setting.title,
-                        value = setting.value.toInt(),
-                        color = setting.color
+                        settingData = setting,
+                        selectable = selectable,
+                        onClick = onClick
                     )
                 }
             }
