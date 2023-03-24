@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Breathwork</string>
+    <string name="session_over">Session Over</string>
+    <string name="round_break">Round Break</string>
+    <string name="retention">Retention</string>
+    <string name="breathwork_session">Breathwork Session</string>
+    <string name="calendar">Calendar</string>
+    <string name="adjust">Adjust %s</string>
+    <string name="tempo">Tempo</string>
+    <string name="breaths">Breaths</string>
+    <string name="rounds">Rounds</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="join_for_free">Join for free!</string>
+    <string name="good_morning">Good morning %s</string>
+    <string name="good_afternoon">Good afternoon %s</string>
+    <string name="good_evening">Good evening %s</string>
 </resources>
