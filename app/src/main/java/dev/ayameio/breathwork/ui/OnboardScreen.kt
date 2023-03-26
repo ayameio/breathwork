@@ -1,4 +1,4 @@
-package dev.ayameio.breathwork.onboarding
+package dev.ayameio.breathwork.ui
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.*
@@ -42,7 +42,7 @@ fun OnboardScreen(
     ) {
         Text(
             modifier = modifier,
-            text = "Welcome!",
+            text = stringResource(id = R.string.welcome),
             style = MaterialTheme.typography.h3
         )
         Spacer(modifier = Modifier.height(32.dp))
@@ -95,11 +95,8 @@ fun JoinButton() {
             .height(TextFieldDefaults.MinHeight)
             .width(TextFieldDefaults.MinWidth),
         onClick = { /* ... */ },
-        // Uses ButtonDefaults.ContentPadding by default
-
         shape = CircleShape,
     ) {
-        // Inner content including an icon and a text label
         Text(text = stringResource(id = R.string.join_for_free))
         Spacer(Modifier.size(ButtonDefaults.IconSpacing))
         Icon(

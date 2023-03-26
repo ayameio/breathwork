@@ -8,7 +8,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import dev.ayameio.breathwork.R
 import dev.ayameio.breathwork.data.SettingData
 
 @Composable
@@ -31,7 +33,7 @@ fun SettingsCard(
                 .fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(text = "Settings")
+            Text(text = stringResource(id = R.string.settings))
             Spacer(modifier = Modifier.height(30.dp))
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -42,7 +44,9 @@ fun SettingsCard(
                     Setting(
                         settingData = setting,
                         selectable = selectable,
-                        onClick = onClick
+                        onClick = onClick,
+                        textColorSelected = Color.White,
+                        textColorUnselected = Color.Black,
                     )
                 }
             }

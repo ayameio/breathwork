@@ -1,8 +1,5 @@
-package dev.ayameio.breathwork.home
+package dev.ayameio.breathwork.ui.home
 
-import androidx.compose.foundation.Canvas
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -12,13 +9,10 @@ import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dev.ayameio.breathwork.components.Bubble
-import dev.ayameio.breathwork.components.SettingsCard
 import dev.ayameio.breathwork.data.SettingData
 import dev.ayameio.breathwork.data.settings
 import dev.ayameio.breathwork.ui.theme.BreathworkTheme
@@ -77,7 +71,7 @@ fun BreathingSettings(
 
     val selectedSetting by remember { mutableStateOf(settings[0]) }
 
-    val settingValue = selectedSetting.value
+    val settingValue = selectedSetting.defaultValue
     val settingRange = selectedSetting.range
 
     var sliderPosition by remember { mutableStateOf(settingValue) }
@@ -121,44 +115,5 @@ fun BreathingSettings(
                 }
             }
         }
-    }
-}
-
-
-@Composable
-fun Setting(
-    modifier: Modifier = Modifier,
-    title: String,
-    value: Int,
-    color: Color,
-    onClick: () -> Unit
-) {
-    Column(
-        modifier = Modifier.clickable(onClick = onClick),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-        Box(modifier = Modifier
-            .size(size = 60.dp)
-            .clip(CircleShape)
-            .background(
-                color = Color(0xFFE8E8E8)
-            )
-        ) {
-            Canvas(modifier = Modifier
-                .size(size = 60.dp)
-            ) {
-                drawCircle(
-                    color = color,
-                    style = Stroke(width = 10.dp.toPx())
-                )
-            }
-            Text(
-                text = value.toString(),
-                modifier = Modifier.align(Alignment.Center),
-                style = MaterialTheme.typography.h6
-            )
-        }
-        Text(text = title)
     }
 }
