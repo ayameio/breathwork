@@ -26,6 +26,6 @@ val Typography = Typography(
     h3 = TextStyle(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Black,
-        fontSize = 32.sp
+        fontSize = 22.sp
     )
 )
