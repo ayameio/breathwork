@@ -1,14 +1,9 @@
 ## App Screenshots / Designs
 
 <p align="center">
-    <img src="screenshots/Application - Flowmap.png"/>
-</p>
-
-<p align="center">
-    <img src="screenshots/Light - Onboarding.png"/> <img src="screenshots/Light - Home.png"/>
-    <img src="screenshots/Light - Calendar.png"/> <img src="screenshots/Light - Session.png"/>
-    <img src="screenshots/Light - Retention.png"/> <img src="screenshots/Light - Pause.png"/>
-    <img src="screenshots/Light - Session Over.png"/>
+    <img src="screenshots/new/Group 92.png"/> <img src="screenshots/new/Group 91.png"/>
+    <img src="screenshots/new/Group 93.png"/> <img src="screenshots/new/Group 94.png"/>
+    <img src="screenshots/new/Group 95.png"/> <img src="screenshots/new/Group 96.png"/>
 </p>
 
 ### Status: 🚧 In progress

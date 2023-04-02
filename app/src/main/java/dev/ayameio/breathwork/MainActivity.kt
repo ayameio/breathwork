@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
+import dev.ayameio.breathwork.ui.home.HomeScreen
 import dev.ayameio.breathwork.ui.theme.BreathworkTheme
 
 class MainActivity : ComponentActivity() {
